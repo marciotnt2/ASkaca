@@ -33,7 +33,7 @@ namespace Askaca
             alunoSalvar.nome = aluno.nome;
             alunoSalvar.RG = aluno.RG;
             alunoSalvar.telefone = aluno.telefone;
-            alunoSalvar.turma = aluno.turma;
+            alunoSalvar.Turma = aluno.Turma;
             banco.SaveChanges();
         }
 

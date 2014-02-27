@@ -77,6 +77,26 @@
     <Compile Include="Migrations\201402231410546_alterArte.Designer.cs">
       <DependentUpon>201402231410546_alterArte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201402270151116_virtual.cs" />
+    <Compile Include="Migrations\201402270151116_virtual.Designer.cs">
+      <DependentUpon>201402270151116_virtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402270234372_virtual11.cs" />
+    <Compile Include="Migrations\201402270234372_virtual11.Designer.cs">
+      <DependentUpon>201402270234372_virtual11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402270625288_virtual111.cs" />
+    <Compile Include="Migrations\201402270625288_virtual111.Designer.cs">
+      <DependentUpon>201402270625288_virtual111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402270648106_virtual112.cs" />
+    <Compile Include="Migrations\201402270648106_virtual112.Designer.cs">
+      <DependentUpon>201402270648106_virtual112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402270707472_virtual1111.cs" />
+    <Compile Include="Migrations\201402270707472_virtual1111.Designer.cs">
+      <DependentUpon>201402270707472_virtual1111.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProfEdit.cs">
       <SubType>Form</SubType>
@@ -107,6 +127,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201402231410546_alterArte.resx">
       <DependentUpon>201402231410546_alterArte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402270151116_virtual.resx">
+      <DependentUpon>201402270151116_virtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402270234372_virtual11.resx">
+      <DependentUpon>201402270234372_virtual11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402270625288_virtual111.resx">
+      <DependentUpon>201402270625288_virtual111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402270648106_virtual112.resx">
+      <DependentUpon>201402270648106_virtual112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402270707472_virtual1111.resx">
+      <DependentUpon>201402270707472_virtual1111.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfCad.resx">
       <DependentUpon>ProfCad.cs</DependentUpon>

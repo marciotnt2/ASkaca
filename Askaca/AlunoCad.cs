@@ -33,7 +33,7 @@ namespace Askaca
             ProfessorAplicacao profApp = new ProfessorAplicacao();
             IEnumerable<Professor> professor = profApp.Listar();
             IList<IList<Professor>> ret = new List<IList<Professor>>();
-            var query = (from p in professor select p.nome).ToList();
+            var query = (from p in professor select p).ToList();
             comboProf.DisplayMember = "nome";
             comboProf.DataSource = query;
 
@@ -43,7 +43,7 @@ namespace Askaca
             TurmaAplicacao turmafApp = new TurmaAplicacao();
             IEnumerable<Turmas> turma = turmafApp.Listar();
             IList<IList<Professor>> ret = new List<IList<Professor>>();
-            var query = (from p in turma select p.horario).ToList();
+            var query = (from p in turma select p).ToList();
             ComboHorario.DisplayMember = "Horario";
             ComboHorario.DataSource = query;
 
@@ -53,7 +53,7 @@ namespace Askaca
             TurmaAplicacao turmafApp = new TurmaAplicacao();
             IEnumerable<Turmas> turma = turmafApp.Listar();
             IList<IList<Professor>> ret = new List<IList<Professor>>();
-            var query = (from p in turma select p.horario).ToList();
+            var query = (from p in turma select p).ToList();
             ComboModalidade.DisplayMember = "Horario";
             ComboModalidade.DataSource = query;
 
@@ -63,7 +63,7 @@ namespace Askaca
             ArteAplicacao arteApp = new ArteAplicacao();
             IEnumerable<Arte> turma = arteApp.Listar();
             IList<IList<Arte>> ret = new List<IList<Arte>>();
-            var query = (from p in turma select p.nome).ToList();
+            var query = (from p in turma select p).ToList();
             ComboModalidade.DisplayMember = "nome";
             ComboModalidade.DataSource = query;
 
@@ -77,20 +77,37 @@ namespace Askaca
         private void button1_Click(object sender, EventArgs e)
         {
             Turmas turma = new Turmas();
-            AlunoAplicacao arteApp = new AlunoAplicacao();
+            AlunoAplicacao alunoApp = new AlunoAplicacao();
+            TurmaAplicacao turmaApp = new TurmaAplicacao();
+            ArteAplicacao arteApp = new ArteAplicacao();
             Aluno aluno = new Aluno();
             aluno.nome = txtNome.Text;
             aluno.RG = txtRG.Text;
             aluno.CPF = txtCPF.Text;
             aluno.logradouro = txtEndereco.Text;
             aluno.telefone = txtTelefone.Text;
-            turma.ID = ComboHorario.SelectedIndex;
-            aluno.turma.ID = turma.ID;
-            
-            turma.horario = System.DateTime.Now;
-            turma.ID = 1;
-            turma.professor = prof;
-            professorApp.Salvar(prof);
+            aluno.dataNascimento = System.DateTime.Now;
+            aluno.dataPagamento = System.DateTime.Now;
+            int selectedIndexTurma = ComboHorario.SelectedIndex;
+            Object selectedItemTurma = ComboHorario.SelectedItem;
+            turma = (Turmas)selectedItemTurma;
+
+            aluno.Turma = turmaApp.Listar().Where(x => x.ID == turma.ID).First();
+            //aluno.turma_id = 1;
+
+           
+            int selectedIndexProf = comboProf.SelectedIndex;
+           Object selectedItemProf = comboProf.SelectedItem;
+          // aluno. = (Professor) selectedItemProf;
+
+           int selectedIndexModalidade = ComboModalidade.SelectedIndex;
+           Object selectedItemModalidade = ComboModalidade.SelectedItem;
+           Arte arte = new Arte();
+            arte = (Arte)selectedItemModalidade;
+            aluno.Arte = arteApp.Listar().Where(x => x.ID == arte.ID).First();
+            //aluno.arte.ID = 1;
+         
+            alunoApp.Salvar(aluno);
             MessageBox.Show("Registro salvo com sucesso");
            // LimpaTela();
         }

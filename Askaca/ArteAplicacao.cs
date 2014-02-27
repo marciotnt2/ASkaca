@@ -32,7 +32,7 @@ namespace Askaca
             artesalvar.ID = arte.ID;
             artesalvar.mensalidade = arte.mensalidade;
             artesalvar.nome = arte.nome;
-            artesalvar.professor = arte.professor;
+            //artesalvar.professor = arte.professor;
             banco.SaveChanges();
         }
 

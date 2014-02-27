@@ -11,6 +11,7 @@ namespace Askaca
         public int ID { get; set; }
         public DateTime horario { get; set; }
         public Professor professor { get; set; }
+        public virtual IEnumerable<Aluno> Aluno { get; set; }
 
     }
 }
