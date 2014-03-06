@@ -75,7 +75,7 @@ namespace Askaca
 
             prof.telefone = txtTelefone.Text;
             Turmas turma = new Turmas();
-            turma.horario = System.DateTime.Now;
+            turma.Inicio = Convert.ToString(System.DateTime.Now);
             turma.ID = 1;
             turma.professor = prof;
             professorApp.Alterar(prof);

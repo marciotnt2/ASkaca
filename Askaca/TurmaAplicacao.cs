@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.Entity;
 namespace Askaca
 {
     class TurmaAplicacao
@@ -23,15 +23,17 @@ namespace Askaca
 
         public IEnumerable<Turmas> Listar()
         {
-            return banco.Turmas.ToList();
+            return banco.Turmas.Include(x=> x.modalidade).ToList();
         }
 
         public void Alterar(Turmas turma)
         {
             Turmas turmaSalvar = banco.Turmas.Where(x => x.ID == turma.ID).First();
             turmaSalvar.ID = turma.ID;
-            turmaSalvar.horario = turma.horario;
+            turmaSalvar.Inicio = turma.Inicio;
+            turmaSalvar.fim = turma.fim;
             turmaSalvar.professor = turma.professor;
+            turma.modalidade = turmaSalvar.modalidade;
             banco.SaveChanges();
         }
 

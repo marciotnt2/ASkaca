@@ -40,7 +40,7 @@ namespace Askaca
 
             prof.telefone = txtTelefone.Text;
             Turmas turma = new Turmas();
-            turma.horario = System.DateTime.Now;
+            turma.Inicio = Convert.ToString(System.DateTime.Now);
             turma.ID = 1;
             turma.professor = prof;
             professorApp.Salvar(prof);
@@ -50,13 +50,13 @@ namespace Askaca
         }
         private void LimpaTela()
         {
-            txtCPF.Text = "";
-            txtModalidade.Text = "";
-            txtNome.Text = "";
-            txtNome.Text = "";
-            txtRG.Text = "";
-            txtTelefone.Text = "";
-            txtTurma.Text = "";
+            txtCPF.Text = string.Empty;
+            txtModalidade.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtRG.Text = string.Empty;
+            txtTelefone.Text = string.Empty;
+            txtTurma.Text = string.Empty;
         }
     }
 }

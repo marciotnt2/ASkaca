@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Askaca
 {
@@ -23,7 +24,7 @@ namespace Askaca
 
         public IEnumerable<Aluno> Listar()
         {
-            return banco.Aluno.ToList();
+            return banco.Aluno.Include(x => x.Arte).ToList();
         }
 
         public void Alterar(Aluno aluno)

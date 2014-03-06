@@ -10,7 +10,9 @@ namespace Askaca
     {
         public int ID { get; set; }
         public string nome { get; set; }
-        public virtual IEnumerable<Aluno> Aluno { get; set; }
         public int mensalidade { get; set; }
+        public virtual IEnumerable<Aluno> Aluno { get; set; }
+        public virtual IEnumerable<Professor> Professor { get; set; }
+        public virtual IEnumerable<Turmas> Turma { get; set; }
     }
 }

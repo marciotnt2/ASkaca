@@ -17,12 +17,12 @@ namespace Askaca
         public AlunoCad()
         {
             InitializeComponent();
-            //this.TopLevel = true;
-            //this.TopMost = true;
-            //this.BringToFront();
-            //this.Show();
-            //this.Activate();
-            //this.Focus();
+            this.TopLevel = true;
+            this.TopMost = true;
+            this.BringToFront();
+            this.Show();
+            this.Activate();
+            this.Focus();
             PopulaCombProf();
             PopulaCombobHorario();
             PopulaComboArte();
@@ -44,7 +44,7 @@ namespace Askaca
             IEnumerable<Turmas> turma = turmafApp.Listar();
             IList<IList<Professor>> ret = new List<IList<Professor>>();
             var query = (from p in turma select p).ToList();
-            ComboHorario.DisplayMember = "Horario";
+            ComboHorario.DisplayMember = "Inicio";
             ComboHorario.DataSource = query;
 
         }
@@ -92,7 +92,7 @@ namespace Askaca
             Object selectedItemTurma = ComboHorario.SelectedItem;
             turma = (Turmas)selectedItemTurma;
 
-            aluno.Turma = turmaApp.Listar().Where(x => x.ID == turma.ID).First();
+           // aluno.Turma = turmaApp.Listar().Where(x => x.ID == turma.ID).First();
             //aluno.turma_id = 1;
 
            
@@ -104,7 +104,7 @@ namespace Askaca
            Object selectedItemModalidade = ComboModalidade.SelectedItem;
            Arte arte = new Arte();
             arte = (Arte)selectedItemModalidade;
-            aluno.Arte = arteApp.Listar().Where(x => x.ID == arte.ID).First();
+           // aluno.Arte =  arteApp.Listar().Where(x => x.ID == arte.ID).First();
             //aluno.arte.ID = 1;
          
             alunoApp.Salvar(aluno);

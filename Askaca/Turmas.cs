@@ -9,9 +9,12 @@ namespace Askaca
    public class Turmas
     {
         public int ID { get; set; }
-        public DateTime horario { get; set; }
-        public Professor professor { get; set; }
-        public virtual IEnumerable<Aluno> Aluno { get; set; }
+        public string Inicio { get; set; }
+        public string fim { get; set; }
+        public string dias { get; set; }
+        public virtual Professor professor { get; set; }
+         public Arte modalidade { get; set; }
+        public virtual IEnumerable<Aluno> aluno { get; set; }
 
     }
 }

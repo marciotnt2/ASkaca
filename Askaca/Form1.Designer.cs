@@ -51,14 +51,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridAluno = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.txtpesquisaTurma = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridTUrmas = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.cbModalidade = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Aluno.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProf)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAluno)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTUrmas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -111,7 +123,7 @@
             this.Aluno.Name = "Aluno";
             this.Aluno.SelectedIndex = 0;
             this.Aluno.ShowToolTips = true;
-            this.Aluno.Size = new System.Drawing.Size(768, 322);
+            this.Aluno.Size = new System.Drawing.Size(768, 356);
             this.Aluno.TabIndex = 2;
             // 
             // tabPage1
@@ -201,6 +213,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.cbModalidade);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button8);
@@ -212,7 +226,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(760, 296);
+            this.tabPage2.Size = new System.Drawing.Size(760, 330);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Aluno";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -282,6 +296,14 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button11);
+            this.tabPage3.Controls.Add(this.button12);
+            this.tabPage3.Controls.Add(this.button13);
+            this.tabPage3.Controls.Add(this.button14);
+            this.tabPage3.Controls.Add(this.txtpesquisaTurma);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.dataGridTUrmas);
+            this.tabPage3.Controls.Add(this.button15);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -289,6 +311,69 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(667, 262);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(82, 23);
+            this.button11.TabIndex = 23;
+            this.button11.Text = "Remover";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(570, 262);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(91, 23);
+            this.button12.TabIndex = 22;
+            this.button12.Text = "Editar";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(448, 262);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(107, 23);
+            this.button13.TabIndex = 21;
+            this.button13.Text = "Cadastrar Turma";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(325, 262);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(108, 23);
+            this.button14.TabIndex = 20;
+            this.button14.Text = "Listar Todos";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // txtpesquisaTurma
+            // 
+            this.txtpesquisaTurma.Location = new System.Drawing.Point(58, 265);
+            this.txtpesquisaTurma.Name = "txtpesquisaTurma";
+            this.txtpesquisaTurma.Size = new System.Drawing.Size(197, 20);
+            this.txtpesquisaTurma.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Nome";
+            // 
+            // dataGridTUrmas
+            // 
+            this.dataGridTUrmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTUrmas.Location = new System.Drawing.Point(11, 11);
+            this.dataGridTUrmas.Name = "dataGridTUrmas";
+            this.dataGridTUrmas.Size = new System.Drawing.Size(738, 235);
+            this.dataGridTUrmas.TabIndex = 16;
             // 
             // button1
             // 
@@ -310,11 +395,38 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button15
+            // 
+            this.button15.Image = global::Askaca.Properties.Resources.Pesquisar;
+            this.button15.Location = new System.Drawing.Point(272, 263);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(38, 23);
+            this.button15.TabIndex = 17;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // cbModalidade
+            // 
+            this.cbModalidade.FormattingEnabled = true;
+            this.cbModalidade.Location = new System.Drawing.Point(100, 291);
+            this.cbModalidade.Name = "cbModalidade";
+            this.cbModalidade.Size = new System.Drawing.Size(121, 21);
+            this.cbModalidade.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 298);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Modalidade";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 379);
+            this.ClientSize = new System.Drawing.Size(774, 414);
             this.Controls.Add(this.Aluno);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -331,6 +443,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAluno)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTUrmas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +478,16 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridView dataGridAluno;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox txtpesquisaTurma;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridTUrmas;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbModalidade;
     }
 }
 

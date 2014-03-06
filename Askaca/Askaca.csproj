@@ -97,6 +97,50 @@
     <Compile Include="Migrations\201402270707472_virtual1111.Designer.cs">
       <DependentUpon>201402270707472_virtual1111.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403031732435_alteraçãoemturma.cs" />
+    <Compile Include="Migrations\201403031732435_alteraçãoemturma.Designer.cs">
+      <DependentUpon>201403031732435_alteraçãoemturma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403031901070_trumaadd.cs" />
+    <Compile Include="Migrations\201403031901070_trumaadd.Designer.cs">
+      <DependentUpon>201403031901070_trumaadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403041354044_adddias.cs" />
+    <Compile Include="Migrations\201403041354044_adddias.Designer.cs">
+      <DependentUpon>201403041354044_adddias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051423378_addarte.cs" />
+    <Compile Include="Migrations\201403051423378_addarte.Designer.cs">
+      <DependentUpon>201403051423378_addarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051436139_addarte1.cs" />
+    <Compile Include="Migrations\201403051436139_addarte1.Designer.cs">
+      <DependentUpon>201403051436139_addarte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051517060_addarte2.cs" />
+    <Compile Include="Migrations\201403051517060_addarte2.Designer.cs">
+      <DependentUpon>201403051517060_addarte2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051603008_addarte3.cs" />
+    <Compile Include="Migrations\201403051603008_addarte3.Designer.cs">
+      <DependentUpon>201403051603008_addarte3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051617518_addarte4.cs" />
+    <Compile Include="Migrations\201403051617518_addarte4.Designer.cs">
+      <DependentUpon>201403051617518_addarte4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051629342_addarte5.cs" />
+    <Compile Include="Migrations\201403051629342_addarte5.Designer.cs">
+      <DependentUpon>201403051629342_addarte5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051639453_addarte6.cs" />
+    <Compile Include="Migrations\201403051639453_addarte6.Designer.cs">
+      <DependentUpon>201403051639453_addarte6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403051729205_addarte7.cs" />
+    <Compile Include="Migrations\201403051729205_addarte7.Designer.cs">
+      <DependentUpon>201403051729205_addarte7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProfEdit.cs">
       <SubType>Form</SubType>
@@ -115,6 +159,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurmaAplicacao.cs" />
+    <Compile Include="TurmaCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurmaCad.Designer.cs">
+      <DependentUpon>TurmaCad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Turmas.cs" />
     <EmbeddedResource Include="AlunoCad.resx">
       <DependentUpon>AlunoCad.cs</DependentUpon>
@@ -143,6 +193,39 @@
     <EmbeddedResource Include="Migrations\201402270707472_virtual1111.resx">
       <DependentUpon>201402270707472_virtual1111.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403031732435_alteraçãoemturma.resx">
+      <DependentUpon>201403031732435_alteraçãoemturma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403031901070_trumaadd.resx">
+      <DependentUpon>201403031901070_trumaadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403041354044_adddias.resx">
+      <DependentUpon>201403041354044_adddias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051423378_addarte.resx">
+      <DependentUpon>201403051423378_addarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051436139_addarte1.resx">
+      <DependentUpon>201403051436139_addarte1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051517060_addarte2.resx">
+      <DependentUpon>201403051517060_addarte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051603008_addarte3.resx">
+      <DependentUpon>201403051603008_addarte3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051617518_addarte4.resx">
+      <DependentUpon>201403051617518_addarte4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051629342_addarte5.resx">
+      <DependentUpon>201403051629342_addarte5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051639453_addarte6.resx">
+      <DependentUpon>201403051639453_addarte6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403051729205_addarte7.resx">
+      <DependentUpon>201403051729205_addarte7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfCad.resx">
       <DependentUpon>ProfCad.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +242,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TurmaCad.resx">
+      <DependentUpon>TurmaCad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

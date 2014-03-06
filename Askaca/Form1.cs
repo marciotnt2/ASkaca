@@ -15,9 +15,15 @@ namespace Askaca
         public Form1()
         {
             InitializeComponent();
-            ListarProfessores();
+            ListarTurmas();
             ListarAlunos();
+            PopulaComboArte();
         }
+    private void ListarTurmas()
+    {
+        TurmaAplicacao professor = new TurmaAplicacao();
+        dataGridTUrmas.DataSource = professor.Listar();
+    }
     private void ListarProfessores()
     {
          ProfessorAplicacao prof = new ProfessorAplicacao();
@@ -26,7 +32,16 @@ namespace Askaca
     private void ListarAlunos()
     {
         AlunoAplicacao Aluno = new AlunoAplicacao();
-        dataGridAluno.DataSource = Aluno.Listar();
+        ArteAplicacao arteApp = new ArteAplicacao();
+
+         int selectedIndexModalidade = cbModalidade.SelectedIndex;
+           Object selectedItemModalidade = cbModalidade.SelectedItem;
+           Arte arte = new Arte();
+            Aluno aluno = new Aluno();
+            arte = (Arte)selectedItemModalidade;
+           // aluno.Arte = arteApp.Listar().Where(x => x.ID == arte.ID).First();
+
+      dataGridAluno.DataSource = Aluno.Listar().Where(x => x.Arte.ID == arte.ID);
     }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,11 +52,21 @@ namespace Askaca
             prof.RG = "602548";
             prof.telefone = "3265889";
             Turmas turma = new Turmas();
-            turma.horario = System.DateTime.Now;
+            turma.Inicio = Convert.ToString(System.DateTime.Now);
             turma.ID = 1;
             turma.professor = prof;
             professorApp.Salvar(prof);
             
+
+        }
+        private void PopulaComboArte()
+        {
+            ArteAplicacao arteApp = new ArteAplicacao();
+            IEnumerable<Arte> turma = arteApp.Listar();
+            IList<IList<Arte>> ret = new List<IList<Arte>>();
+            var query = (from p in turma select p).ToList();
+            cbModalidade.DisplayMember = "nome";
+            cbModalidade.DataSource = query;
 
         }
 
@@ -154,6 +179,8 @@ namespace Askaca
                 AlunoAplicacao alunoapp = new AlunoAplicacao();
                 IEnumerable<Aluno> alunoslist = alunoapp.Listar();
 
+
+
                 try
                 {
                     aluno = alunoslist.Where(x => x.nome == alunoNome.nome).First();
@@ -183,6 +210,53 @@ namespace Askaca
         {
             AlunoCad alunoCad = new AlunoCad();
             alunoCad.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ListarTurmas();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (txtpesquisaTurma.Text != "")
+            {
+                Turmas turmaNome = new Turmas();
+                Turmas turma = new Turmas();
+                List<Turmas> alunos = new List<Turmas>();
+                turmaNome.ID = Convert.ToInt16(txtpesquisaTurma.Text);
+                TurmaAplicacao turmapp = new TurmaAplicacao();
+                IEnumerable<Turmas> alunoslist = turmapp.Listar();
+
+                try
+                {
+                    turma = alunoslist.Where(x => x.ID == turmaNome.ID).First();
+                    alunos.Add(turma);
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Não existe aluno com esse nome");
+                }
+                dataGridAluno.DataSource = alunos;
+            }
+            else
+            {
+                MessageBox.Show("Digite um nome");
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Turmas turma = new Turmas();
+            turma = (Turmas)dataGridTUrmas.CurrentRow.DataBoundItem;
+            TurmaAplicacao app = new TurmaAplicacao();
+            app.Excluir(turma.ID);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            TurmaCad turmacad = new TurmaCad();
+            turmacad.Show();
         }
     }
 }
